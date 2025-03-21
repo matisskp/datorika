@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>Datorikas Portfolio</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<style>
+body,h1,h2,h3,h4,h5,h6 {font-family: "Lato", sans-serif}
+.w3-bar,h1,button {font-family: "Montserrat", sans-serif}
+.fa {font-size:50px}
+.w3-bar {display: flex; justify-content: center;}
+.section {
+  padding: 60px 20px;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 800px;
+}
+.section:nth-child(even) {background: #e0e0e0;}
+.section:nth-child(odd) {background: #f4f4f4;}
+.slider {
+  width: 50%;
+  height: 100%;
+  overflow: hidden;
+  position: relative;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+}
+.slider img, .slider video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 10px;
+}
+.text-content {
+  width: 45%;
+  font-size: 24px;
+  color: #333;
+}
+.button-container {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  align-items: center;
+}
+.download-button {
+  display: inline-block;
+  padding: 15px 30px;
+  font-size: 18px;
+  color: #fff;
+  background-color: #007bff;
+  text-align: center;
+  text-decoration: none;
+  border-radius: 5px;
+}
+
+</style>
+</head>
+<body>
+</style>
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+  let index = 0;
+  const slides = document.querySelectorAll(".slider img");
+  function slideImages() {
+    slides.forEach((img, i) => {
+      img.classList.remove("active");
+    });
+    slides[index].classList.add("active");
+    index = (index + 1) % slides.length;
+  }
+  slides[0].classList.add("active");
+  setInterval(slideImages, 2000);
+});
+</script>
+<style>
+  .slider img {
+    opacity: 0;
+    transition: opacity 1s ease-in-out;
+    position: absolute;
+  }
+  .slider img.active {
+    opacity: 1;
+  }
+  .slider {
+    position: relative;
+  }
+</style>
+
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    let index = 0;
+    const gimpSlides = document.querySelectorAll(".section:nth-child(3) .slider img");
+    function slideGimpImages() {
+      const nextIndex = (index + 1) % gimpSlides.length;
+      gimpSlides[nextIndex].classList.add("active");
+      setTimeout(() => {
+        gimpSlides[index].classList.remove("active");
+        index = nextIndex;
+      }, 1000); // Matches the opacity transition duration
+    }
+    gimpSlides[0].classList.add("active");
+    setInterval(slideGimpImages, 2000);
+  });
+</script>
+
+</head>
+<body>
+
+</head>
+<body>
+
+<!-- Navbar -->
+<div class="w3-top">
+  <div class="w3-bar w3-black w3-card w3-large">
+    <a class="w3-bar-item w3-button w3-padding-large w3-white">Home</a>
+    <a href="#portfolio" class="w3-bar-item w3-button w3-padding-large w3-hover-gray">Portfolio</a>
+  </div>
+</div>
+
+<!-- Header -->
+<header class="w3-container w3-center w3-black" style="padding:128px 16px">
+  <h1 class="w3-margin w3-jumbo">Datorikas Portfolio</h1>
+  <p class="w3-xlarge">Matīss Kipļuks</p>
+  <a href="#portfolio" class="w3-button w3-red w3-padding-large w3-large w3-margin-top">Apskatīt portfolio</a>
+</header>
+
+<!-- Portfolio Section -->
+<div id="portfolio" class="w3-container">
+  <div class="section">
+    <div class="slider">
+      <img src="images/bilde.png" alt="Bilde">
+      <img src="images/teksts_uzd.png" alt="Teksts uzdevums">
+    </div>
+    <div class="text-content">
+      <h2>GIMP</h2>
+      <p>Izmantojot GIMP PD ietvaros, veidoju sava vārda burtiem ar sniega elementiem. Nākamais attēls arī tika veidots ņemot littlewebhut.com puzzles paraugus.</p>
+    </div>
+  </div>
+
+  <!-- 3D Modelis Section -->
+  <div class="section">
+    <div class="text-content">
+      <h2>3D modelis</h2>
+      <p>Grupas ietvaros bija jāuztaisa iedomāta uzņēmuma logo un tas kā puzzle vēlāk ir jāizprintē ar 3D printeri. Mūsu uzņēmums bija ‘’The Friendly Oven’’ , kas ir picērija. Puzzle bija sadalīta 6 gabaliņos un katrs grupas biedrs veidoja vienu gabaliņu. Modelēšanai izmantojām ‘’Thinkercad’’ programmatūru. Vēlāk veidoto modeli kā STL failu eksportēja un printerī izprintēja.</p>
+    </div>
+    <div class="slider">
+      <img src="images/puzzle1.jpeg" alt="Puzzle1">
+      <img src="images/puzzle2.jpeg" alt="Puzzle2">
+    </div>
+  </div>
+
+  <!-- Excel Section -->
+  <div class="section">
+    <div class="button-container">
+      <a href="images/Darbs_ar_MsExcel4.xlsx" class="download-button">Lejupielādēt Darbs_ar_MsExcel4.xlsx</a>
+      <a href="images/excelKD2025.xlsx" class="download-button">Lejupielādēt excelKD2025.xlsx</a>
+    </div>
+    <div class="text-content">
+      <h2>Excel</h2>
+      <p>Pirmais fails ir Exel pārbaudes darba un treniņa nolūkiem rediģēts fails. Tas iekļauj datu importēšanu un apstrādi, kopsavilkumu jeb raksturtabulu veidošana, atbilstošās diagrammas veidošanu, datu analīzi, formulu pielietošanu, datņu nosacījumu atrašanu utt. Otrs fails ir Exel noslēguma pārbaudes darbs.</p>
+    </div>
+  </div>
+
+  <!-- Word Section -->
+  <div class="section">
+    <div class="text-content">
+      <h2>Word</h2>
+      <p>Pirmais fails ir WordKD_trene, kas ir word pārbaudes darba gatavošanās darbs. Tur ir apskatīta tabulas veidošana un formatēšana no dotajiem datiem, teksta formatēšana, attēlu formatēšana, apzīmējumu pievienošana, noformēšana pēc dotā parauga utt. Otrais fails ir Word kontroldarbs.</p>
+    </div>
+    <div class="button-container">
+      <a href="images/WordKD_trene.docx" class="download-button">Lejupielādēt WordKD_trene.docx</a>
+      <a href="images/" class="download-button">Lejupielādēt Word Kontroldarbs</a>
+    </div>
+  </div>
+
+  <div class="section">
+  <div class="slider">
+    <img src="images/2fa.png" alt="2FA Logo">
+  </div>
+  <div class="text-content">
+    <h2>Inkscape</h2>
+    <p>Šajā sadaļā tika izmantota Inkscape programma, lai veidotu vektorgrafikas projektu par divu faktoru autentifikāciju logo.</p>
+  </div>
+</div>
+  <!-- Video Section -->
+  <div class="section">
+    <div class="text-content">
+      <h2>Video</h2>
+      <p>Izveidota videofilma par savas grupas darbu - uzņēmuma logo un 3D objekta veidošanu.Video tika iekļauti vajadzīgie elementi un efekti- pārejas efekti, pievienots audio, paskaidrojošs teksts, beigu titri. Video veidoju ar ‘’Canva’’ video redaktoru. Izveidots tika arī scenārija dokuments pirms video taisīšanas.</p>
+    </div>
+    <div class="slider">
+      <video controls width="100%" style="border-radius: 10px;">
+        <source src="images/datorikas_video_matiss.mp4" type="video/mp4">
+        
+      </video>
+    </div>
+  </div>
+</div>
+
+<!-- Contact Page -->
+<div id="contact" class="w3-container w3-padding-64 w3-light-grey">
+  <h2 class="w3-center">Kontakti</h2>
+  <div class="w3-content w3-center" style="max-width:600px">
+    <form action="mailto:matiss.kipluks@gmail.com" method="post" enctype="text/plain">
+      <label for="name">Vārds</label>
+      <input class="w3-input w3-border" type="text" id="name" name="name" required>
+      <label for="surname">Uzvārds</label>
+      <input class="w3-input w3-border" type="text" id="surname" name="surname" required>
+      <label for="message">Ziņa</label>
+      <textarea class="w3-input w3-border" type="text" id="surname" name="surname" required>
+      <label for="message">Ziņa</label>
+      <textarea class="w3-input w3-border" id="message" name="message" required></textarea>
+      <button class="w3-button w3-black w3-margin-top" type="submit">Sūti</button>
+    </form>
+  </div>
+</div>
+<div class="w3-container w3-center w3-padding-32">
+  <a href="otrais.html" class="w3-button w3-red w3-round w3-large"> --></a>
+</div>
+
+<!-- Footer -->
+<footer class="w3-container w3-center w3-black w3-padding-64">  
+  <p>Telefons: +371 27002153 | Email: matiss.kipluks@gmail.com</p>
+</footer>
+
+</body>
+</html>
