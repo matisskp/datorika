@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="lv">
+<head>
+<title>Rīgas Valsts 1. ģimnāzija</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+header {
+  background-color: #666;
+  padding: 30px;
+  text-align: center;
+  font-size: 35px;
+  color: white;
+}
+
+section {
+  display: flex;
+}
+
+nav {
+  flex: 1;
+  background: #ccc;
+  padding: 20px;
+}
+
+nav ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+article {
+  flex: 3;
+  background-color: #f1f1f1;
+  padding: 10px;
+}
+
+footer {
+  background-color: #777;
+  padding: 10px;
+  text-align: center;
+  color: white;
+}
+
+@media (max-width: 600px) {
+  section {
+    flex-direction: column;
+  }
+}
+nav {
+  background: url('images/skola.jpg') repeat center center; 
+  background-size: contain; 
+}
+
+img {
+  filter: opacity(70%);
+}
+
+nav a {
+  color: white !important;
+}
+nav h3 {
+  color: white;
+}
+
+img:hover {
+  opacity: 1; 
+}
+
+
+</style>
+</head>
+<body>
+
+<header>
+  <h2>Rīgas Valsts 1. ģimnāzija</h2>
+</header>
+
+<section>
+  <nav>
+    <h3>Satura rādītājs</h3>
+    <ul>
+      <li><a href="#vesture">1. Vēsture</a></li>
+      <li><a href="#nosaukumu-maina">2. Skolas nosaukumu maiņas</a></li>
+      <li><a href="#vaditaji">3. Zināmie skolas vadītāji (1229—1804)</a></li>
+      <li><a href="#absolventi">4. Skolas absolventi</a></li>
+    </ul>
+  </nav>
+  
+  <article>
+    <h2 id="vesture">1. Vēsture</h2>
+    <p>Rīgas Valsts 1. ģimnāzija (RV1Ģ) ir vecākā skola Rīgā, kas specializējas matemātikas un valodu padziļinātā apgūšanā. Skola piedalās Starptautiskā bakalaurāta programmā un tās absolventu biedrība finansiāli atbalsta skolu.</p>
+    <p>Skolas vēsture sākas 1211. gadā, kad bīskaps Alberts dibināja Svētās Marijas katedrāli un pie tās Livonijas domkapitula klosteri. 1239. gada dokumentos minēts pirmais zināmais skolas vadītājs — kanoniķis Heinrihs.</p>
+
+    <h2 id="nosaukumu-maina">2. Skolas nosaukumu maiņas</h2>
+    <ul>
+      <li>1211—1528: Domkapitula klostera skola</li>
+      <li>1528—1631: Rīgas pilsētas Domskola</li>
+      <li>1631—1710: Rīgas Akadēmiskā ģimnāzija</li>
+      <li>1711—1804: Rīgas Domskola</li>
+      <li>1804—1860: Rīgas 1. apriņķa skola</li>
+      <li>1861—1873: Rīgas Reālģimnāzija</li>
+      <li>1873—1894: Rīgas Pilsētas ģimnāzija</li>
+      <li>1894—1895: 8 klašu klasiskā ģimnāzija</li>
+      <li>1896—1919: Valsts ģimnāzija</li>
+      <li>1919—1920: 1. vidusskola</li>
+      <li>1920—1940: Rīgas pilsētas 1. ģimnāzija</li>
+      <li>1940—1944: Rīgas 1. vidusskola</li>
+      <li>1944—1990: Rīgas L. Paegles 1. vidusskola</li>
+      <li>1990—1996: Rīgas 1. ģimnāzija</li>
+      <li>1996—pašlaik: Rīgas Valsts 1. ģimnāzija</li>
+    </ul>
+
+    <h2 id="vaditaji">3. Zināmie skolas vadītāji (1229—1804)</h2>
+    <table border="1" width="100%">
+      <tr>
+        <th>Laiks</th>
+        <th>Vadītājs</th>
+      </tr>
+      <tr>
+        <td>ap 1239</td>
+        <td>Kanoniķis Heinrihs</td>
+      </tr>
+      <tr>
+        <td>1528—1538</td>
+        <td>Jakobs Batuss</td>
+      </tr>
+      <tr>
+        <td>1538—1554</td>
+        <td>Retgers Pistorijs</td>
+      </tr>
+      <tr>
+        <td>1554—1561</td>
+        <td>Hermanis Vilkens</td>
+      </tr>
+      <tr>
+        <td>1579—1589</td>
+        <td>Heinrihs Mellers</td>
+      </tr>
+      <tr>
+        <td>1669—1681</td>
+        <td>Georgs Lauterbahs</td>
+      </tr>
+      <tr>
+        <td>1755—1765</td>
+        <td>Johans Gothelfs Lindners</td>
+      </tr>
+      <tr>
+        <td>1780—1787</td>
+        <td>Karlis Filips Mihaels Snells</td>
+      </tr>
+      <tr>
+        <td>1788—1804</td>
+        <td>Kārlis Gotlobs Zontāgs</td>
+      </tr>
+    </table>
+    
+    <h2 id="absolventi">4. Skolas absolventi</h2>
+    <p>Skolas absolventu vidū ir ievērojami Latvijas zinātnieki, mākslinieki un politiķi, piemēram, Vilhelms Ostvalds un Jānis Pliekšāns.</p>
+    <p>Rainis (īstajā vārdā Jānis Pliekšāns) bija ievērojams latviešu dzejnieks, dramaturgs un politiķis, kurš dzimis 1865. gada 11. septembrī Dunavas pagasta "Varslavānos". Viņš studēja jurisprudenci Pēterburgas Universitātē un vēlāk darbojās kā advokāts, žurnālists un redaktors. Rainis ir pazīstams ar tādiem darbiem kā "Uguns un nakts" un "Indulis un Ārija". Viņa literārais mantojums un sabiedriskā darbība būtiski ietekmēja latviešu kultūras un nacionālās identitātes veidošanos.</p>
+
+<p>Papildu informāciju par Raini var atrast vietnē <a href="https://www.letonika.lv/literatura/Section.aspx?id=2189826" target="_blank">Letonika.lv</a>.</p>
+
+  </article>
+</section>
+
+<footer>
+  <a href="https://www.r1g.edu.lv/" target="_blank">
+    <img src="images/logo.png" alt="Rīgas Valsts 1. ģimnāzijas logo" style="height: 100px;">
+  </a>
+</footer>
+
+</body>
+</html>
