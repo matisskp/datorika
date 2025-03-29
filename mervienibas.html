@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="lv">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Informācijas daudzuma mērvienības</title>
+    <style>
+        body {
+            background-image: url('images/cipari.jpg');
+            background-size: cover;
+            font-size: 20px;
+        }
+        .container {
+            width: 500px;
+            background-color: rgb(220, 0, 220);
+            color: rgb(0, 220, 0);
+            padding: 20px;
+            border: 2px solid black;
+        }
+        h1 {
+            text-align: center;
+        }
+        label {
+            display: inline-block;
+            width: 200px;
+            font-weight: bold;
+        }
+        input {
+            width: 100px;
+            padding: 5px;
+        }
+        button {
+            display: block;
+            margin-top: 10px;
+            padding: 5px 10px;
+            font-size: 16px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Informācijas daudzuma mērvienības</h1>
+        <label for="gb">GB=</label>
+        <input type="number" id="gb" oninput="convertUnits()">
+        <br><br>
+        <label for="mb">Izteikt megabaitos</label>
+        <input type="text" id="mb" readonly> MB
+        <br><br>
+        <label for="mib">Izteikt mebibaitos</label>
+        <input type="text" id="mib" readonly> MiB
+        <br><br>
+        <button type="button" onclick="convertUnits()">Konvertēt</button>
+    </div>
+    <script>
+        function convertUnits() {
+            let gb = document.getElementById('gb').value;
+            document.getElementById('mb').value = gb * 1000; // 1 GB = 1000 MB
+            document.getElementById('mib').value = gb * 953.674; // 1 GB ≈ 953.674 MiB
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="lv">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gaidot dzimšanas dienu</title>
+</head>
+<body>
+    <h1>Gaidot dzimšanas dienu</h1>
+    <hr>
+    <form>
+        <p>Ievadi pilnu datumu, kad Tev būs tuvākā dzimšanas diena</p>
+        <label>gads: <input type="text" name="gads" id="gads"></label><br>
+        <label>mēnesis: <input type="text" name="menesis" id="menesis"></label><br>
+        <label>diena: <input type="text" name="datums" id="datums"></label><br>
+        <button type="button" name="poga" onclick="dienas()">Aprēķināt dienu skaitu līdz dzimšanas dienai</button>
+    </form>
+    <p>Līdz svētkiem atlikušas <input type="text" name="dienas" id="dienas" readonly> dienas : ))</p>
+
+    <script>
+        function dienas() {
+            let gads = parseInt(document.getElementById("gads").value);
+            let menesis = parseInt(document.getElementById("menesis").value) - 1; // JS mēneši sākas no 0
+            let datums = parseInt(document.getElementById("datums").value);
+            
+            let sodien = new Date();
+            let dzDiena = new Date(sodien.getFullYear(), menesis, datums);
+            
+            if (dzDiena < sodien) {
+                dzDiena.setFullYear(sodien.getFullYear() + 1);
+            }
+            
+            let starpiba = Math.ceil((dzDiena - sodien) / (1000 * 60 * 60 * 24));
+            document.getElementById("dienas").value = starpiba;
+        }
+    </script>
+</body>
+</html>
